@@ -57,7 +57,8 @@ int main()
         return 0;
     }
 
-    int num = 0;
+    int num = 0,
+        j = 0;
 /*    for (int i = 0; i < n; ++i) {//n
 
 //        for (int j = 0; j <= k; ++j) {
@@ -72,9 +73,22 @@ int main()
 
 //    }*/
     while (num < pow(k, n)) {
+//        int i = 0;
+//        num += i;
+//        if(i < k)
+//            i++;
+//        if (i = 3) {
+
+//        }
         for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < k; ++j) {
-                cout << (num = j + pow(10, i)) << endl;
+
+
+            for (int j = 0; j <= k; ++j) {
+                cout << (num = i * j) << endl;
+                if(j == k){
+                    num += 7;
+                }
+                j++;
             }
         }
     }

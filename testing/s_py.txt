@@ -1,0 +1,19 @@
+N = 40
+K = 3
+
+def sumDigits( number ):
+    result = 0
+    while number > 0:
+        result += number % 10
+        number /= 10
+    return result
+
+count = 0
+n = K**N
+
+for i in range(0,n):
+    print( i, "/", n )
+    if( sumDigits(i) % 2 != 0  ):
+        count += 1
+
+print( count )

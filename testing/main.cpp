@@ -33,7 +33,7 @@ unsigned long int decToSis(int entered, int osnovanie = 2)
 
 int main()
 {
-    unsigned long int n = 10,
+    unsigned long int n = 5,
                       k = 3;
 //    cout << "1 >= N <= 100, 1 >= K <= 9, K*N <= 300 \n\n enter N: ";
 //    cin >> n;
@@ -58,7 +58,21 @@ int main()
     }
 
     int num = 0,
-        j = 0;
+        high = 0;
+
+    for (int i = 0; i < n; ++i) {
+        int j;
+        for (j = 0; j < k; ++j) {
+
+            cout << high << endl;
+            high += 1;
+        }
+//        high  -= k;
+        high += (j-k) * pow(10, i);
+
+    }
+
+
 /*    for (int i = 0; i < n; ++i) {//n
 
 //        for (int j = 0; j <= k; ++j) {
@@ -72,26 +86,23 @@ int main()
 //    while(num < (pow(k, n))){
 
 //    }*/
-    while (num < pow(k, n)) {
-//        int i = 0;
-//        num += i;
-//        if(i < k)
-//            i++;
-//        if (i = 3) {
+//    while (num < pow(k, n)) {
+////        int i = 0;
+////        num += i;
+////        if(i < k)
+////            i++;
+////        if (i = 3) {
 
+////        }
+//        for (int i = 0; i < n; ++i) {
+//            for (int m = 0; m < n; ++m) {
+//                for (int j = 0; j <= k; ++j) {
+//                    num += j + m * pow(10, n);
+//                    //cout << num << endl;
+//                }
+//            }
 //        }
-        for (int i = 0; i < n; ++i) {
-
-
-            for (int j = 0; j <= k; ++j) {
-                cout << (num = i * j) << endl;
-                if(j == k){
-                    num += 7;
-                }
-                j++;
-            }
-        }
-    }
+//    }
 
 //    int happy = unhappyNumCount(num);
 
